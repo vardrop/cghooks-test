@@ -1,0 +1,18 @@
+{
+    "require-dev": {
+        "brainmaestro/composer-git-hooks": "^2.8"
+    },
+    "scripts": {
+        "post-install-cmd": "cghooks add --ignore-lock",
+        "post-update-cmd": "cghooks update",
+        "cghooks": "vendor/bin/cghooks"
+    },
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "echo 1 lorem ipsum",
+                "echo 2 dolor eset"
+            ]
+        }
+    }
+}
